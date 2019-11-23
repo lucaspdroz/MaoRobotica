@@ -34,27 +34,23 @@ void loop() {
   switch(val) {
     case 1:
       likeHand();
-      Serial.println("Like hand");
       break;
 
     case 2:
       hangloose();
-      Serial.println("Hangloose");
       break;
 
     case 3:
       middleFinger();
-      Serial.println("Middle finger");
       break;
     case 4: 
       openHand();
       break;
     default:
       reset();
-      Serial.println("Reset");
       break;
   }
-  delay(4000);                     // Wait for the servo to get there
+
 }
 
 void reset() {
