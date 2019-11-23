@@ -1,12 +1,16 @@
 
 import processing.serial.*;
+import processing.video.*; 
+Capture video; 
 Serial port;                      // Create object from Serial class
 float mx = 0.0;
 int soma;
 int counter;
 
 void setup() { 
-  size(200, 200); 
+  size(600, 400);
+  video = new Capture(this, 640, 480, 30);
+  video.start();
   noStroke(); 
   frameRate(10); 
   // Open the port that the board is connected to and use the same speed (9600 bps) 
@@ -18,7 +22,15 @@ void setup() {
   port = new Serial(this, Serial.list()[0], 9600);
 } 
 
-void draw() {   
+void captureEvent(Capture video) {
+  video.read();
+}
+
+void draw() {
+  
+  background(0);
+  image(video, 0, 0);
+  
   int option = 4;
   
   if(counter % 2 == 0) {
