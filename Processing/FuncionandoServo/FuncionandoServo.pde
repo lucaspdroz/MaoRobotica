@@ -2,6 +2,8 @@
 import processing.serial.*;
 Serial port;                      // Create object from Serial class
 float mx = 0.0;
+int soma;
+int counter;
 
 void setup() { 
   size(200, 200); 
@@ -13,26 +15,23 @@ void setup() {
   // List all the available serial ports, preceded by their index number:
   printArray(Serial.list());
   // Instead of 0 input the index number of the port you are using:
-  port = new Serial(this, Serial.list()[1], 9600);
+  port = new Serial(this, Serial.list()[0], 9600);
 } 
 
 void draw() {   
-  background(0);  // Clear background 
-  fill(204);    // Set fill color 
-  rect(40, height/2-15, 120, 25);     // Draw square
-
-  float dif = mouseX - mx;
-  if (abs(dif) > 1.0) {
-    mx += dif/4.0;
-  }
-  mx = constrain(mx, 50, 149);                // Keeps marker on the screen
-  noStroke();
-  fill(255);
-  rect(50, (height/2)-5, 100, 5);  
-  fill(204, 102, 0);
+  int option = 4;
   
-  rect(mx-2, height/2-5, 4, 5);               // Draw the position marker
-  int angle = int(map(mx, 50, 149, 0, 180));  // Scale the value to the range 0-180
+  if(counter % 2 == 0) {
+     option = 1; 
+  } else if(counter % 3 == 0){
+    option = 2;
+  } else {
+    option = 4;
+  }
+  println("Option: "+ option);
   //print(angle + " ");                       // Print the current angle (debug)
-  port.write(angle);                        // Write the angle to the serial port
+  port.write(String.valueOf(option));                       // Write the angle to the serial port
+  delay(3000);
+  
+  counter++;
 }
