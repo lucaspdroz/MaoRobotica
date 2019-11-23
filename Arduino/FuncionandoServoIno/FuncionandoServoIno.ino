@@ -10,9 +10,9 @@ void setup() {
   // Attach fingers
   thumb.attach(3);
   pointer.attach(12);
-  middle.attach(4);
-  ring.attach(5);
-  pinky.attach(6);
+  // middle.attach(4);
+  // ring.attach(5);
+  // pinky.attach(6);
   // ======== || ========
 
   // 
@@ -21,34 +21,86 @@ void setup() {
   //  Reset all position
   thumb.write(0);
   pointer.write(0);
-  middle.write(0);
-  ring.write(0);
-  pinky.write(0);
+  // middle.write(0);
+  // ring.write(0);
+  // pinky.write(0);
 }
 
 void loop() {
   if (Serial.available()) {      // If data is available to read,
-    val = Serial.read();         // read it and store it in val
+    val = Serial.parseInt();         // read it and store it in val
   }
 
   switch(val) {
-    case 'a':
-      thumb.write(180);
-     break;
+    case 1:
+      likeHand();
+      Serial.println("Like hand");
+      break;
 
-    case 'b':
-      thumb.write(90);
-      pointer.write(90);
+    case 2:
+      hangloose();
+      Serial.println("Hangloose");
+      break;
+
+    case 3:
+      middleFinger();
+      Serial.println("Middle finger");
+      break;
+    case 4: 
+      openHand();
       break;
     default:
-      likeHand();
+      reset();
+      Serial.println("Reset");
       break;
   }
-              // Set the servo position
-  delay(3000);                     // Wait for the servo to get there
+  delay(4000);                     // Wait for the servo to get there
+}
+
+void reset() {
+  thumb.write(0);
+  pointer.write(0);
+  // middle.write(0);
+  // ring.write(0);
+  // pinky.write(0);
 }
 
 void likeHand() {
   thumb.write(180);
   pointer.write(0);
+  // middle.write(0);
+  // ring.write(0);
+  // pinky.write(0);
+}
+
+void middleFinger() {
+  thumb.write(0);
+  pointer.write(0);
+  // middle.write(180);
+  // ring.write(0);
+  // pinky.write(0);
+}
+
+void hangloose() {
+  thumb.write(180);
+  pointer.write(0);
+  // middle.write(0);
+  // ring.write(0);
+  // pinky.write(180);
+}
+
+void rock() {
+  thumb.write(180);
+  pointer.write(180);
+  // middle.write(0);
+  // ring.write(0);
+  // pinky.write(180);
+}
+
+void openHand() {
+  thumb.write(180);
+  pointer.write(180);
+//  middle.write(180);
+//  ring.write(180);
+//  pinky.write(180);
 }
