@@ -9,8 +9,8 @@ int counter;
 
 void setup() { 
   size(600, 400);
-  video = new Capture(this, 640, 480, 30);
-  video.start();
+  //video = new Capture(this, 640, 480, 30);
+  //video.start();
   noStroke(); 
   frameRate(10); 
   // Open the port that the board is connected to and use the same speed (9600 bps) 
@@ -29,7 +29,7 @@ void captureEvent(Capture video) {
 void draw() {
   
   background(0);
-  image(video, 0, 0);
+  //image(video, 0, 0);
   
   int option = 4;
   
