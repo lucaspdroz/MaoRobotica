@@ -6,24 +6,28 @@
 ## Our Fantastic Group 🤖
 
 <div style="display:flex"> 
-<a style="text-align:center; margin:15px" href="https://github.com/evandroLutz">
-    <img style="border-radius:100%; width:100px;" src="https://avatars3.githubusercontent.com/u/48337261?s=460&v=4"><br>
-    @evandroLutz
+<a style="text-align:center; margin:15px" href="https://github.com/evandroLutz">    
+    <img style="border-radius:100%; width:100px;" src="https://avatars3.githubusercontent.com/u/48337261?s=460&v=4">    
+      @evandroLutz
 </a>
-<a style="text-align:center; margin:15px" href="https://github.com/nikolasFreitas">
-    <img style="border-radius:100%; width:100px;" src="https://avatars3.githubusercontent.com/u/13020492?s=460&u=d2a9b3d577610a900174ccdad207df0348373b7c&v=4"><br>
-    @nikolasFreitas
+    <br>
+<a style="text-align:center; margin:15px" href="https://github.com/nikolasFreitas">    
+    <img style="border-radius:100%; width:100px;" src="https://avatars3.githubusercontent.com/u/13020492?s=460&u=d2a9b3d577610a900174ccdad207df0348373b7c&v=4">
+      @nikolasFreitas
 </a>
-<a style="text-align:center; margin:15px" href="https://github.com/lucaspdroz">
-    <img style="border-radius:100%; width:100px;" src="https://avatars2.githubusercontent.com/u/17989796?s=460&v=4"><br>
-    @lucaspdroz
+    <br>
+<a style="text-align:center; margin:15px" href="https://github.com/lucaspdroz">   
+    <img style="border-radius:100%; width:100px;" src="https://avatars2.githubusercontent.com/u/17989796?s=460&v=4">
+      @lucaspdroz
 </a>
-<a style="text-align:center; margin:15px" href="https://github.com/lucasTovo">
-    <img style="border-radius:100%; width:100px;" src="https://avatars2.githubusercontent.com/u/42346794?s=460&v=4"><br>
-    @lucasTovo
+    <br>
+<a style="text-align:center; margin:15px" href="https://github.com/lucasTovo">    
+    <img style="border-radius:100%; width:100px;" src="https://avatars2.githubusercontent.com/u/42346794?s=460&v=4">
+      @lucasTovo
 </a>
-<a style="text-align:center; margin:15px" href="https://github.com/GiovaniBoff">
-    <img style="border-radius:100%; width:100px;" src="https://avatars3.githubusercontent.com/u/42684243?s=460&v=4"><br>
+    <br>
+<a style="text-align:center; margin:15px" href="https://github.com/GiovaniBoff">    
+    <img style="border-radius:100%; width:100px;" src="https://avatars3.githubusercontent.com/u/42684243?s=460&v=4">
     @GiovaniBoff
 </a>
 </div>
